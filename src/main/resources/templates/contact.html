@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="/style/style.css" type="text/css"/>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<header class="header">
+    <a href="/#", class="logo">QSoftware</a>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <nav class="navbar">
+        <a href="/#home" class="active">Home</a>
+        <a href="/#about">About</a>
+        <a href="/#education">Education</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#contact">Contact</a>
+
+        <span class="active-nav"></span>
+    </nav>
+
+    <div class="btn" id="language-icon">pl</div>
+    <div class="bx bx-moon" id="darkMode-icon"></div>
+</header>
+
+<section class="registeredContact" >
+    <form method="POST" th:action="@{/contact}" th:object="${contact}" id="contactData">
+            <div>Full Name: </div><span th:text="${contact.fullName}"></span><br>
+            <div>Mobile Number: </div><span th:text="${contact.mobileNumber}"></span><br>
+            <div>Email Address: </div><span th:text="${contact.emailAddress}"></span><br>
+            <div>Email Subject: </div><span th:text="${contact.emailSubject}"></span><br>
+            <div>Your Message: </div><span th:text="${contact.yourMessage}"></span><br>
+    </form>
+</section>
+
+<!-- footer design -->
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2023 by QSoftware | All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-iconTop">
+        <a href="#"><i class='bx bxs-download' ></i></a>
+    </div>
+</footer>
+
+<script src="/script/script.js"></script>
+</body>
+</html>

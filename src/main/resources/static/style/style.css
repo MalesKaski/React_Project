@@ -653,6 +653,20 @@ span {
     color: var(--main-color);
 }
 
+.registeredContact {
+    min-height: 90.5vh;
+    padding-bottom: 7rem;
+}
+
+.registeredContact form {
+    font-size: 2.5rem;
+    width: 50rem;
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+}
+
 /* BREAKPOINT */
 @media (max-width: 1200px) {
     html {

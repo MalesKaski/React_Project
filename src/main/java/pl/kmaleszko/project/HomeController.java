@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.io.FileWriter;
+import java.io.IOException;
 
 @Controller
 public class HomeController {
@@ -17,6 +19,7 @@ public class HomeController {
   @PostMapping("/contact")
   public String userContact(@ModelAttribute Contact contact) {
     System.out.println(contact.toString());
-    return "home";
+
+    return "contact";
   }
 }
